@@ -10,8 +10,23 @@
 
 #### Initiale Konfiguration `step` Client Umgebung
 
-	step ca bootstrap --ca-url https://pki.poly-clip.com --fingerprint 0c361bafedf44bd2475a52864dc578e0c4918d556e655d9b095714a0523de4c7
+```shell
+step ca bootstrap \
+  --ca-url https://pki.poly-clip.com \
+  --fingerprint 480ecf4b7dcf00d22d9e84f85248e7158b1380d1d70da727a518f4287ebce72a
+```
 
+#### Root CA Zertifikat herunterladen
+
+```shell
+step ca root root_ca.crt
+```
+
+#### Signieren eines Certificate Signing Requests (CSR)
+
+```shell
+step ca sign host.domain.csr host.domain.crt
+```
 
 #### Referenzen
 
